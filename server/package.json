@@ -5,16 +5,16 @@
   "main": "start.js",
   "dependencies": {
     "express": "~3.4.7",
-    "aspax-express": "icflorescu/aspax-express",
+    "aspax-express": "~0.6.0",
     "coffee-script": "~1.6.3",
     "jade": "~0.35.0",
     "underscore": "~1.5.2",
     "underscore.string": "~2.3.3"
   },
   "devDependencies": {
-    "aspax-coffee-handler": "icflorescu/aspax-coffee-handler",
-    "aspax-ls-handler": "icflorescu/aspax-ls-handler",
-    "aspax-jade-handler": "icflorescu/aspax-jade-handler",
-    "aspax-styl-handler": "icflorescu/aspax-styl-handler"
+    "aspax-coffee-handler": "~0.6.0",
+    "aspax-ls-handler": "~0.6.0",
+    "aspax-jade-handler": "~0.6.0",
+    "aspax-styl-handler": "~0.6.0"
   }
 }

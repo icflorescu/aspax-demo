@@ -1,0 +1,91 @@
+doctype 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="A simple Express.js test configuration for ASPAx")
+    meta(name="author", content="Ionut-Cristian Florescu")
+    link(rel="shortcut icon", href=asset('/favicon.png'))
+    title
+      if currentPage != allPages[0]
+        | #{_s.humanize(currentPage)} :
+        = ' '
+      | ASPAx
+    link(rel="stylesheet", href=asset('/css/app.css'))
+  body
+    //- Wrap all page content here
+    #wrap
+      //- Fixed navbar
+      .navbar.navbar-default.navbar-fixed-top(role="navigation"): .container
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="/") ASPAx
+        .collapse.navbar-collapse: ul.nav.navbar-nav
+          each i in _.range(3)
+            li(class=(allPages[i] == currentPage ? 'active' : undefined))
+              a(href=(i == 0 ? '/' : allPages[i]))= _s.humanize(allPages[i])
+          li.dropdown
+            a.dropdown-toggle(href="#", data-toggle="dropdown") More <b class="caret"></b>
+            ul.dropdown-menu
+              each i in _.range(4, 10)
+                if i == 6
+                  li.divider
+                  li.dropdown-header Even more:
+                li(class=(allPages[i] == currentPage ? 'active' : undefined))
+                  a(href=allPages[i])= _s.humanize(allPages[i])
+
+      //- Page content
+      .container
+        div.page-header: h1 ASPAx
+          if currentPage != allPages[0]
+            |  &raquo; #{_s.humanize(currentPage)}
+        p.lead
+          | An Express.js/Bootstrap dummy application to demonstrate the usage of
+          = ' '
+          a(href="//github.com/icflorescu/aspax", target="_blank") ASPAx
+          |  asset packager.
+        blockquote: p ASPAx is able to compile and concatenate scripts, stylesheets and client-side templates, and minify, compress and fingerprint them for production use.
+        p
+          | Client-side JavaScript says this page was rendered
+          = ' '
+          span#rendertime &hellip;
+          | .
+        p
+          | Now we are going to periodically render the current time, using a client-side Jade template:
+          #now.well.text-center &hellip;a moment&hellip;
+        p And these are Bootstrap glyphicons:
+        #icons.well
+          p
+            span.glyphicon.glyphicon-tree-deciduous
+            | Here's a tree&hellip;
+          p
+            span.glyphicon.glyphicon-leaf
+            | &hellip;a leaf&hellip;
+          p
+            span.glyphicon.glyphicon-plane
+            | &hellip;a plane&hellip;
+          p
+            span.glyphicon.glyphicon-paperclip
+            | &hellip;a paperclip&hellip;
+          p
+            span.glyphicon.glyphicon-globe
+            | &hellip;the globe&hellip;
+          p
+            span.glyphicon.glyphicon-question-sign
+            | &hellip;and a question sign.
+        blockquote: p In production, fonts can be compressed and fingerprinted and images can be fingerprinted. URL references in CSS files are automatically intercepted and rewritten as needed.
+
+    #footer: .container: p.text-muted
+      | An Express.js/Bootstrap dummy application to demonstrate the usage of
+      = ' '
+      a(href="//github.com/icflorescu/aspax", target="_blank") ASPAx
+      |  asset packager.
+
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+    script(src=asset('/js/app.js'))

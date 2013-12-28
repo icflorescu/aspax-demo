@@ -36,4 +36,4 @@ app.get '/:page?', (req, res) ->
   res.render 'index',
     currentPage: req.params.page or app.locals.allPages[0]
 
-app.listen 3000
+app.listen 3000, -> console.log 'Application started.'

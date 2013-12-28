@@ -19,13 +19,13 @@ A dummy Express.js application to demonstrate the usage of [ASPAX](http://aspax.
 4. Do the ASPAX magic:
 
         # watch and build on-the-fly during development
-        aspax -s ../assets watch
+        aspax -s ../client watch
 
         # build for development
-        aspax -s ../assets build
+        aspax -s ../client build
 
         # pack for production (will compile, concat, minify, compress and fingerprint)
-        aspax -s ../assets pack
+        aspax -s ../client pack
 
         # clean everything
         aspax -s ../client clean
@@ -40,7 +40,7 @@ A dummy Express.js application to demonstrate the usage of [ASPAX](http://aspax.
 
         # production
         #
-        NODE_ENV=development node start.js
+        NODE_ENV=production node start.js
 
 ## Endorsing the author
 If you find this piece of software useful, please [![endorse](https://api.coderwall.com/icflorescu/endorsecount.png)](https://coderwall.com/icflorescu) me on Coderwall!

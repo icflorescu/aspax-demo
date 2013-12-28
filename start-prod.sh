@@ -1,8 +1,4 @@
-cd ./server
-
-aspax -s ../client pack
-
-echo "Done packaging; starting application in production mode..."
+cd server
 
 NODE_ENV=production node start.js
 

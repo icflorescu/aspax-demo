@@ -16,15 +16,15 @@ app.locals.allPages = [
 app.use express.favicon()
 app.use express.logger if mode is 'production' then 'short' else 'dev'
 
-app.set 'views', path.join __dirname, 'views'
-app.set 'view engine', 'jade'
-
 app.use express.json()
 app.use express.urlencoded()
 app.use express.methodOverride()
 app.use express.errorHandler()
 
 require('aspax-express') app, path.join __dirname, 'aspax.json'
+
+app.set 'views', path.join __dirname, 'views'
+app.set 'view engine', 'jade'
 
 app.use app.router
 app.get '/:page?', (req, res) ->

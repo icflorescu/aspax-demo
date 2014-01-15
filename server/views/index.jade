@@ -6,13 +6,13 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="description", content="A simple Express.js test configuration for ASPAX")
     meta(name="author", content="Ionut-Cristian Florescu")
-    link(rel="shortcut icon", href=asset('/favicon.png'))
+    link(rel="shortcut icon", href=asset('favicon.png'))
     title
       if currentPage != allPages[0]
         | #{_s.humanize(currentPage)} :
         = ' '
       | ASPAX Demo
-    link(rel="stylesheet", href=asset('/css/app.css'))
+    link(rel="stylesheet", href=asset('css/app.css'))
   body
     //- Wrap all page content here
     #wrap
@@ -88,4 +88,4 @@ html(lang="en")
 
 
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
-    script(src=asset('/js/app.js'))
+    script(src=asset('js/app.js'))

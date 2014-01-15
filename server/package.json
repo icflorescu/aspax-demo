@@ -4,11 +4,11 @@
   "private": true,
   "main": "start.js",
   "dependencies": {
-    "express": "~3.4.7",
-    "aspax-express": "~0.6.4",
+    "express": "~3.4.8",
+    "aspax-express": "~0.6.8",
     "st": "~0.2.3",
     "coffee-script": "~1.6.3",
-    "jade": "~1.0.2",
+    "jade": "~1.1.4",
     "underscore": "~1.5.2",
     "underscore.string": "~2.3.3"
   },

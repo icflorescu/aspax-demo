@@ -5,7 +5,7 @@
   "main": "start.js",
   "dependencies": {
     "express": "~3.4.8",
-    "aspax-express": "~0.6.8",
+    "aspax-express": "~0.7.0",
     "st": "~0.2.3",
     "coffee-script": "~1.6.3",
     "jade": "~1.1.4",

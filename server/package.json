@@ -7,8 +7,8 @@
     "express": "~3.4.8",
     "aspax-express": "~0.7.0",
     "st": "~0.2.3",
-    "coffee-script": "~1.6.3",
-    "jade": "~1.1.4",
+    "coffee-script": "~1.7.0",
+    "jade": "~1.1.5",
     "underscore": "~1.5.2",
     "underscore.string": "~2.3.3"
   },

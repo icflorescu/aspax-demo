@@ -5,11 +5,11 @@
   "main": "start.js",
   "dependencies": {
     "express": "~3.4.8",
-    "aspax-express": "~0.7.0",
-    "st": "~0.2.3",
-    "coffee-script": "~1.7.0",
+    "aspax-express": "~0.7.3",
+    "st": "~0.2.6",
+    "coffee-script": "~1.7.1",
     "jade": "~1.1.5",
-    "underscore": "~1.5.2",
+    "underscore": "~1.6.0",
     "underscore.string": "~2.3.3"
   },
   "devDependencies": {

@@ -12,10 +12,11 @@ app.use logger if mode is 'production' then 'short' else 'dev'
 app.use express.static path.join __dirname, '/public'
 
 app.use compression()
-app.use bodyParser()
+app.use bodyParser.json()
+app.use bodyParser.urlencoded extended: yes
 
-app.locals._  = require 'underscore'
-app.locals._s = require 'underscore.string'
+app.locals._    = require 'underscore'
+app.locals._str = require 'underscore.string'
 
 app.locals.allPages = [
   'home', 'about', 'contact'

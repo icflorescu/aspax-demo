@@ -9,7 +9,7 @@ html(lang="en")
     link(rel="shortcut icon", href=asset('favicon.png'))
     title
       if currentPage != allPages[0]
-        | #{_str.humanize(currentPage)} :
+        | #{s.humanize(currentPage)} :
         = ' '
       | ASPAX Demo
     link(rel="stylesheet", href=asset('css/app.css'))
@@ -28,7 +28,7 @@ html(lang="en")
         .collapse.navbar-collapse: ul.nav.navbar-nav
           each i in _.range(3)
             li(class=(allPages[i] == currentPage ? 'active' : undefined))
-              a(href=(i == 0 ? '/' : allPages[i]))= _str.humanize(allPages[i])
+              a(href=(i == 0 ? '/' : allPages[i]))= s.humanize(allPages[i])
           li.dropdown
             a.dropdown-toggle(href="#", data-toggle="dropdown") More <b class="caret"></b>
             ul.dropdown-menu
@@ -37,13 +37,13 @@ html(lang="en")
                   li.divider
                   li.dropdown-header Even more:
                 li(class=(allPages[i] == currentPage ? 'active' : undefined))
-                  a(href=allPages[i])= _str.humanize(allPages[i])
+                  a(href=allPages[i])= s.humanize(allPages[i])
 
       //- Page content
       .container
         div.page-header: h1 ASPAX
           if currentPage != allPages[0]
-            |  &raquo; #{_str.humanize(currentPage)}
+            |  &raquo; #{s.humanize(currentPage)}
         p.lead
           | An Express.js/Bootstrap dummy application to demonstrate the usage of
           = ' '

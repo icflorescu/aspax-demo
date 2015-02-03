@@ -1,9 +1,9 @@
 {
-	"js/app.js": "/js/app.js",
-	"css/app.css": "/css/app.css",
+	"js/app.js": "/js/app-1422989909422.min.js",
+	"css/app.css": "/css/app-1422989909422.min.css",
 	"favicon.png": "/favicon.png",
-	"fonts/bs-glyphs.eot": "/fonts/bs-glyphs.eot",
-	"fonts/bs-glyphs.svg": "/fonts/bs-glyphs.svg",
-	"fonts/bs-glyphs.ttf": "/fonts/bs-glyphs.ttf",
-	"fonts/bs-glyphs.woff": "/fonts/bs-glyphs.woff"
+	"fonts/bs-glyphs.eot": "/fonts/bs-glyphs-1422989909422.eot",
+	"fonts/bs-glyphs.svg": "/fonts/bs-glyphs-1422989909422.svg",
+	"fonts/bs-glyphs.ttf": "/fonts/bs-glyphs-1422989909422.ttf",
+	"fonts/bs-glyphs.woff": "/fonts/bs-glyphs-1422989909422.woff"
 }

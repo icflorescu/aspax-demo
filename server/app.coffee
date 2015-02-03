@@ -15,8 +15,8 @@ app.use compression()
 app.use bodyParser.json()
 app.use bodyParser.urlencoded extended: yes
 
-app.locals._    = require 'underscore'
-app.locals._str = require 'underscore.string'
+app.locals._ = require 'underscore'
+app.locals.s = require 'underscore.string'
 
 app.locals.allPages = [
   'home', 'about', 'contact'
@@ -29,8 +29,7 @@ require('aspax-express') app, path.join __dirname, 'aspax.json'
 app.set 'views', path.join __dirname, 'views'
 app.set 'view engine', 'jade'
 
-app.get '/:page?', (req, res) ->
-  res.render 'index',
-    currentPage: req.params.page or app.locals.allPages[0]
+app.get '/:page?', (req, res) -> res.render 'index',
+  currentPage: req.params.page or app.locals.allPages[0]
 
 app.listen 3000, -> console.log 'Application listening on port 3000...'
